@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+body{
+    background-color: #973d80;
+}
+.select-box , .play-board , .result-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    transition: all 0.3s ease;
+}
+.select-box{
+    background: white;
+    padding: 20px 25px 25px;
+    border-radius: 5px;
+    max-width: 330px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+.select-box.hide{
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50% , -50%) scale(0.9);
+}
+.select-box h1{
+    font-size: 23px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.select-box .title{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 20px 0;
+}
+.select-box .options{
+    display: flex;
+    width: 100%;
+}
+.select-box button{
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    padding: 8px 0;
+    outline: none;
+    background-color: #973d80;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+.select-box button:hover,
+.result-box .btn button:hover{
+    transform: scale(0.96);
+}
+.options button.playerX{
+    margin-right: 5px;
+}
+.options button.playeY{
+    margin-left: 5px;
+}
+.play-board{
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50% , -50%) scale(0.9);
+}
+.players.active span:first-child{
+    color: #973d80;
+}
+.players.active span:nth-child(2){
+    color: white;
+}
+.players.active .slider{
+    left: 50%;
+}
+.play-board.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50% , -50%) scale(1);
+}
+.play-board .details{
+    background: white;
+    padding: 7px;
+    border-radius: 5px;
+}
+.play-board .details .players{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+}
+.play-board .details span{
+    width: 100%;
+    border-radius: 5px;
+    padding: 7px 0;
+    font-size: 19px;
+    font-weight: 500;
+    cursor: default;
+    text-align: center;
+    color: #973d80;
+    position: relative;
+    z-index: 5;
+    transition: all 0.3s ease;
+}
+.details span:first-child{
+    color: white;
+}
+.details .slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background-color: #973d80;
+    border-radius: 5px;
+    z-index: 2;
+}
+.play-board .paly-area{
+    margin-top: 20px;   
+}
+.play-board section{
+    display: flex;
+}
+.play-board section span{
+    display: block;
+    margin: 2px;
+    height: 80px;
+    width: 80px;
+    background: white;
+    border-radius: 5px;
+    font-size: 40px;
+    text-align: center;
+    line-height: 80px;
+    color: #973d80;
+}
+.result-box{
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 350px;
+    width: 100%;
+    /* display: none; */
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50% , -50%) scale(0.9);
+}
+.result-box.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50% , -50%) scale(1);
+}
+.result-box .won-text{
+    font-size: 25px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+.result-box .won-text p{
+    font-weight: 600;
+    margin: 0 5px;
+}
+.result-box .btn{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+.result-box .btn button{
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    padding: 8px 20px;
+    outline: none;
+    background-color: #973d80;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
